@@ -10,38 +10,46 @@
     <div class="simulacao">
       <div>
         <label for="valor">Valor:</label>
-        <input name="valor" id="valor" type="number" />
+        <input id="valorInicial" type="number" value="200000" />
       </div>
       <div>
         <label for="Name">Prazo (anos):</label>
-        <input name="prazo-anos" id="prazo-anos" type="number" />
+        <input id="prazoAno" type="number" value="20" />
       </div>
       <div>
         <label for="Name">Juros ao ano:</label>
-        <input name="juros" id="prazo" type="number" /><br />
-      </div>
-    </div>
-    <h2>Resultado</h2>
-    <div class="resultado">
-      <div>
-        <label for="valor">Prazo (meses):</label>
-        <input name="prazo-mes" id="prazo-mes" type="number" />
-      </div>
-      <div>
-        <label for="Name">Juros ao mês:</label>
-        <input name="juros-mes" id="juros-mes" type="number" />
-      </div>
-      <div>
-        <label for="Name">Juros acumulado:</label>
-        <input name="juros-acumulado" id="juros-acumulado" type="number" />
+        <input id="jurosAno" type="number" value="0.08" /><br />
       </div>
     </div>
 
-    <div>
-      <label>Prestação</label>
-      <label>Amortização</label>
-      <label>Juros</label>
-      <label>Total</label>
+    <button id="btnSimular">Simular</button>
+
+    <h2>Resultado</h2>
+    <div class="resultado">
+      <div>
+        <label id="prazo-mes">Prazo (meses):</label>
+        <input disabled id="prazoMes" />
+      </div>
+      <div>
+        <label id="juros-mes">Juros ao mês:</label>
+        <input disabled id="jurosMes" type="number" />
+      </div>
+      <div>
+        <label id="juros-acumulado">Juros acumulado:</label>
+        <input disabled id="jurosAcumulado" />
+      </div>
+    </div>
+    <div id="dprestacoes">
+      <table id="tprestacoes">
+        <thead>
+          <tr>
+            <td>Prestação</td>
+            <td>Amortização</td>
+            <td>Juros</td>
+            <td>Total</td>
+          </tr>
+        </thead>
+      </table>
     </div>
     <script src="script.js"></script>
   </body>

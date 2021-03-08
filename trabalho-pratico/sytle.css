@@ -6,6 +6,10 @@ h2 {
   color: #47c5bc;
 }
 
+#table tr td {
+  width: 100px;
+}
+
 .simulacao {
   display: flex;
   width: 20px;

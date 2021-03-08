@@ -6,35 +6,35 @@ de acordo com o Sistema de Amortizações Constantes (SAC).
 
 Atividades
 Os alunos deverão desempenhar as seguintes atividades:
-[]Crie uma página com três campos de entrada numéricos: Valor, Prazo (anos) e
-  Juros ao ano. Tais campos devem estar inicialmente preenchidos com os valores
-  200.000, 20 e 0,08, respectivamente.
+[x]Crie uma página com três campos de entrada numéricos: Valor, Prazo (anos) e
+Juros ao ano. Tais campos devem estar inicialmente preenchidos com os valores
+200.000, 20 e 0,08, respectivamente.
 
 []Adicione um botão Simular. Ao apertar o botão, calcule e exiba na interface as
-  seguintes informações:
-  []Prazo (meses): prazo total do financiamento em meses, ou seja, o valor de
-    Prazo (anos) multiplicado por 12.
-  []Juros ao mês: taxa de juros mensal corresponde à taxa anual informada. Tal
-    taxa pode ser calculada com a seguinte fórmula:
-                  jm = (1+ja)^(1/12)-1
-  []Juros acumulados: soma de todos os valores pagos de juros, considerando
-    todas as prestações, até o final do financiamento (mais detalhes no item 3).
-  []Tabela com o valor das 5 primeiras prestações, indicando o valor pago como
-    amortização, o valor pago como juros e o total (soma dos dois).
+seguintes informações:
+[]Prazo (meses): prazo total do financiamento em meses, ou seja, o valor de
+Prazo (anos) multiplicado por 12.
+[]Juros ao mês: taxa de juros mensal corresponde à taxa anual informada. Tal
+taxa pode ser calculada com a seguinte fórmula:
+jm = (1+ja)^(1/12)-1
+[]Juros acumulados: soma de todos os valores pagos de juros, considerando
+todas as prestações, até o final do financiamento (mais detalhes no item 3).
+[]Tabela com o valor das 5 primeiras prestações, indicando o valor pago como
+amortização, o valor pago como juros e o total (soma dos dois).
 
 []O cálculo da parcela deve ser feito de acordo com o Sistema de Amortizações
-  Constantes (SAC). Neste sistema, a parcela é composta de:
-  []Amortização: valor total financiado dividido pelo número de prestações. Este
-    valor é o mesmo em todas as prestações. Por exemplo, se foi financiado
-    200.000,00 em 240 parcelas, a amortização é 833,33.
-  []Juros: saldo devedor multiplicado pelos juros ao mês. O saldo devedor
-    inicialmente é o valor total, e diminui a cada prestação paga de acordo com
-    o valor de amortização. Por exemplo, ao calcular a terceira prestação, o
-    saldo devedor seria: 200.000,00 – 2 × 833,33.
+Constantes (SAC). Neste sistema, a parcela é composta de:
+[]Amortização: valor total financiado dividido pelo número de prestações. Este
+valor é o mesmo em todas as prestações. Por exemplo, se foi financiado
+200.000,00 em 240 parcelas, a amortização é 833,33.
+[]Juros: saldo devedor multiplicado pelos juros ao mês. O saldo devedor
+inicialmente é o valor total, e diminui a cada prestação paga de acordo com
+o valor de amortização. Por exemplo, ao calcular a terceira prestação, o
+saldo devedor seria: 200.000,00 – 2 × 833,33.
 
 []Para simplificar, assuma que os campos de entrada sempre estarão preenchidos
 corretamente. Ou seja, não é obrigatório tratar o caso do valor, prazo ou juros ao
-ano estarem vazios ou com valores inválidos. 
+ano estarem vazios ou com valores inválidos.
 
 []Estilize a aplicação usando CSS da maneira que achar adequado. A única
 exigência é utilizar cor de texto diferente para destacar um ou mais elementos. A
