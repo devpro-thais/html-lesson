@@ -6,50 +6,87 @@
     <title>SAC</title>
   </head>
   <body>
-    <h2>Simulação de financiamento</h2>
-    <div class="simulacao">
-      <div>
-        <label for="valor">Valor:</label>
-        <input id="valorInicial" type="number" value="200000" />
-      </div>
-      <div>
-        <label for="Name">Prazo (anos):</label>
-        <input id="prazoAno" type="number" value="20" />
-      </div>
-      <div>
-        <label for="Name">Juros ao ano:</label>
-        <input id="jurosAno" type="number" value="0.08" /><br />
-      </div>
-    </div>
+    <div class="app">
+      <h2>Simulação de financiamento</h2>
+        <div class="camposSac">
+          <div>
+            <label>Valor: <br /></label>
+            <input id="valorInicial" type="number" value="20000" />
+          </div>
+          <div>
+            <label>Prazo (anos): <br /></label>
+            <input id="prazoAno" type="number" value="20"/>
+          </div>
+          <div>
+            <label>Juros ao ano: <br /></label>
+            <input id="jurosAno" type="number" value="0.08"/><br />
+          </div>
+          <div>
+            <button onclick="calcular()">Simular</button>
+          </div>
+        </div>
 
-    <button id="btnSimular">Simular</button>
-
-    <h2>Resultado</h2>
-    <div class="resultado">
-      <div>
-        <label id="prazo-mes">Prazo (meses):</label>
-        <input disabled id="prazoMes" />
+        <div class="dresultado">
+          <h2>Resultado</h2>
+          <div>
+            <label id="prazo-mes">Prazo (meses): <br /></label>
+            <input disabled id="prazoMes" />
+          </div>
+          <div>
+            <label id="juros-mes">Juros ao mês: <br /></label>
+            <input disabled id="jurosMes" type="number" />
+          </div>
+          <div>
+            <label id="juros-acumulado">Juros acumulado: <br /></label>
+            <input disabled id="jurosAcumulado" />
+          </div>
+        </div>
       </div>
+      <br />
       <div>
-        <label id="juros-mes">Juros ao mês:</label>
-        <input disabled id="jurosMes" type="number" />
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Prestação</th>
+              <th>Amortização</th>
+              <th>Juros</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div>
-        <label id="juros-acumulado">Juros acumulado:</label>
-        <input disabled id="jurosAcumulado" />
-      </div>
-    </div>
-    <div id="dprestacoes">
-      <table id="tprestacoes">
-        <thead>
-          <tr>
-            <td>Prestação</td>
-            <td>Amortização</td>
-            <td>Juros</td>
-            <td>Total</td>
-          </tr>
-        </thead>
-      </table>
     </div>
     <script src="script.js"></script>
   </body>

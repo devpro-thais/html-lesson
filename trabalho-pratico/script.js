@@ -4,42 +4,48 @@ var jurosAno = document.getElementById("jurosAno");
 var prazoMes = document.getElementById("prazoMes");
 var jurosMes = document.getElementById("jurosMes");
 var jurosAcum = document.getElementById("jurosAcumulado");
-var amortizacao;
+var tbody = document.getElementById("tbody");
+
+var vlAmortizacao;
 var saldoDevedor;
-var totalJuros = 0;
 var jurosAcumulado = 0;
 
-var btnSimular = document.getElementById("btnSimular");
-btnSimular.addEventListener("click", buttonSimula);
-
-function buttonSimula() {
-  prazoMes.value = prazoAno.value * 12;
-  jurosMes.value = (1 + jurosAno.valueAsNumber) ** (1 / 12) - 1;
-  amortizacao = valorInicial.value / prazoMes.value;
-  simulaFinanciamento();
-  jurosAcum.value = jurosAcumulado.toFixed(2);
+function calcular(){
+  
 }
 
+var btnSimular = document.getElementById("btnSimular");
+btnSimular.addEventListener("click", function buttonSimula() {
+  prazoMes.value = prazoAno.value * 12;
+  jurosMes.value = (1 + jurosAno.valueAsNumber) ** (1 / 12) - 1;
+  vlAmortizacao = valorInicial.value / prazoMes.value;
+  simulaFinanciamento();
+  jurosAcum.value = jurosAcumulado.toFixed(2);
+});
+
+//função de simulação do financiamento
 function simulaFinanciamento() {
   for (var i = 0; i < prazoMes.value; i++) {
-    saldoDevedor = valorInicial.value - i * amortizacao;
+    saldoDevedor = valorInicial.value - i * vlAmortizacao;
     var juros = saldoDevedor * jurosMes.valueAsNumber;
-    totalJuros = amortizacao + juros;
+    totalJuros = vlAmortizacao + juros;
     jurosAcumulado += juros;
   }
 }
 
-function prestacoes(){
-  var tprestacoes = document.getElementById("tprestacoes");
-  var qtdLinhas = 5;
-  var linha = tprestacoes.insertRow(qtdLinhas);
+var prestacao;
+var amortizacao;
+var juros;
+var total;
 
-  for(var i=0; i<5; i++) {
-    for(var j=0; j<4; j++) {
-        var cellPrestacao= linha.insertCell(i);
-        var cellAmortizacao= linha.insertCell(i);
-        var cellJuros= linha.insertCell(i);
-        var cellTotal= linha.insertCell(i);
+function criarTabela() {
+  var table = document.getElementById("table");
+  var tbody = document.getElementById("tbody");
+
+  for (var i = 1; i < 6; i++) {
+    var tr = document.createElement("tr");
+    for (var j = 1; j < 6; j++) {
+      prestacao.value = i;
     }
   }
 }

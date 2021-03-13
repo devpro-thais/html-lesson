@@ -16,20 +16,42 @@ h2 {
   height: 100px;
 }
 
-.simulacao > div {
+.dsimulacao > div {
+  height: 50px;
+  width: auto;
   margin: 6px;
-  padding: 0 6px;
-  text-align: start;
+  padding: 6px 6px;
+  align-items: flex-start;
+  font-size: large;
+  color: #47c5bc;
 }
 
-.resultado {
-  display: flex;
-  width: 20px;
-  height: 100px;
+input {
+  width: 300px;
 }
 
-.resultado > div {
+th {
+  font-size: large;
+  padding: 0 100px;
+  color: #47c5bc;
+  font-style: bold;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  background-color: #47c5bc;
+  border-color: #47c5bc;
+  border-radius: 10%;
+  color: aliceblue;
+}
+
+.dresultado > div {
+  height: 50px;
+  width: auto;
   margin: 6px;
-  padding: 0 6px;
-  text-align: start;
+  padding: 6px 6px;
+  align-items: flex-start;
+  font-size: large;
+  color: #47c5bc;
 }
